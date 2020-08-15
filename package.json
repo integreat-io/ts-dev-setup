@@ -1,7 +1,9 @@
 {
-  "name": "ts-dev-setup",
+  "name": "@integreat-io/ts-dev-setup",
   "version": "1.0.0",
   "description": "Common dev setup for TypeScript projects",
+  "author": "Kjell-Morten Bratsberg Thorsen <kjellmorten@integreat.io>",
+  "license": "ISC",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,12 +12,13 @@
     "type": "git",
     "url": "git+https://github.com/integreat-io/ts-dev-setup.git"
   },
-  "author": "Kjell-Morten Bratsberg Thorsen <kjellmorten@integreat.io>",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/integreat-io/ts-dev-setup/issues"
   },
   "homepage": "https://github.com/integreat-io/ts-dev-setup#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^3.7.1",
     "@typescript-eslint/parser": "^3.7.1",
