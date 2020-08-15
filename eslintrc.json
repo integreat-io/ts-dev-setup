@@ -33,5 +33,14 @@
         "tryExtensions": [".js", ".json", ".ts"]
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.test.ts","*.test.js"],
+      "rules": {
+        "node/no-extraneous-import": "off"
+      }
+    }
+  ],
+  "reportUnusedDisableDirectives": true
 }
