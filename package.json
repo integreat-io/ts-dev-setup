@@ -1,6 +1,6 @@
 {
   "name": "@integreat/ts-dev-setup",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "description": "Common dev setup for TypeScript projects",
   "author": "Kjell-Morten Bratsberg Thorsen <kjellmorten@integreat.io>",
   "license": "ISC",
