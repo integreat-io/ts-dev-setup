@@ -30,7 +30,7 @@ ln -s node_modules/@integreat/ts-dev-setup/tsconfig.json tsconfig.json
 
 ```json
 "scripts": {
-    "test": "npm run build && nyc --reporter=text-summary ava --config ./ava-dist.config.js",
+    "test": "npm run lint && npm run build && nyc --reporter=text-summary ava --config ./ava-dist.config.js",
     "test:inspect": "node --inspect node_modules/ava/profile.js",
     "test:watch": "npm run dev",
     "dev": "ava --watch",
