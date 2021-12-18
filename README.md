@@ -16,14 +16,14 @@ Then run the following commands in terminal to set up symbolic links to config
 files:
 
 ```
-ln -s node_modules/@integreat/ts-dev-setup/ava-dist.config.cjs ava-dist.config.cjs
-ln -s node_modules/@integreat/ts-dev-setup/ava.config.cjs ava.config.cjs
-ln -s node_modules/@integreat/ts-dev-setup/codeclimate.yml .codeclimate.yml
-ln -s node_modules/@integreat/ts-dev-setup/editorconfig .editorconfig
-ln -s node_modules/@integreat/ts-dev-setup/eslintrc.json .eslintrc.json
-ln -s node_modules/@integreat/ts-dev-setup/nycrc.json .nycrc.json
-ln -s node_modules/@integreat/ts-dev-setup/prettierrc.json .prettierrc.json
-ln -s node_modules/@integreat/ts-dev-setup/tsconfig.json tsconfig.json
+cp node_modules/@integreat/ts-dev-setup/ava-dist.config.cjs ava-dist.config.cjs
+cp node_modules/@integreat/ts-dev-setup/ava.config.cjs ava.config.cjs
+cp node_modules/@integreat/ts-dev-setup/codeclimate.yml .codeclimate.yml
+cp node_modules/@integreat/ts-dev-setup/editorconfig .editorconfig
+cp node_modules/@integreat/ts-dev-setup/eslintrc.json .eslintrc.json
+cp node_modules/@integreat/ts-dev-setup/nycrc.json .nycrc.json
+cp node_modules/@integreat/ts-dev-setup/prettierrc.json .prettierrc.json
+cp node_modules/@integreat/ts-dev-setup/tsconfig.json tsconfig.json
 ```
 
 ## package.json
