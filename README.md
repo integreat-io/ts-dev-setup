@@ -1,10 +1,9 @@
-# Shared dev setup for TypeScript projects
+# Shared dev setup for Integreat TypeScript projects
 
 _Note:_ You are more than welcome to use this setup in your own projects. We
 will however update this repository according to what we need in the
 Integreat codebases, and take no responsibility for how this may affect your
-projects, and will probably no accept PRs. If you want to make changes we
-suggest forking and using your own fork.
+projects. If you want to make changes, we suggest forking.
 
 ## Install
 
