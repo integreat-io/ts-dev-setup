@@ -20,7 +20,6 @@ cp node_modules/@integreat/ts-dev-setup/ava.config.cjs ava.config.cjs
 cp node_modules/@integreat/ts-dev-setup/codeclimate.yml .codeclimate.yml
 cp node_modules/@integreat/ts-dev-setup/editorconfig .editorconfig
 cp node_modules/@integreat/ts-dev-setup/eslintrc.json .eslintrc.json
-cp node_modules/@integreat/ts-dev-setup/nycrc.json .nycrc.json
 cp node_modules/@integreat/ts-dev-setup/prettierrc.json .prettierrc.json
 cp node_modules/@integreat/ts-dev-setup/tsconfig.json tsconfig.json
 ```
@@ -29,13 +28,12 @@ cp node_modules/@integreat/ts-dev-setup/tsconfig.json tsconfig.json
 
 ```json
 "scripts": {
-    "test": "npm run lint && npm run build && nyc --reporter=text-summary ava --config ./ava-dist.config.js",
+    "test": "npm run lint && npm run build && c8 --reporter=text-summary ava --config ./ava-dist.config.js",
     "test:inspect": "node --inspect node_modules/ava/profile.js",
     "test:watch": "npm run dev",
     "dev": "ava --watch",
     "build": "tsc",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "nyc:report": "nyc report --reporter=text --reporter=html",
+    "coverage": "c8 report",
     "lint": "eslint --ext .ts src"
 }
 ```
