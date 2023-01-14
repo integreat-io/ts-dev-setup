@@ -1,5 +1,6 @@
 module.exports = {
-  extensions: ['ts'],
-  require: ['ts-node/register/transpile-only'],
+  extensions: { ts: 'module' },
+  nodeArguments: ['--loader=ts-node/esm', '--no-warnings'],
+  ignoredByWatcher: ['{coverage,dist,media}/**'],
   files: ['src/**/*.test.ts']
 }
