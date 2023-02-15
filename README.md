@@ -27,6 +27,18 @@ cp node_modules/@integreat/ts-dev-setup/tsconfig.json tsconfig.json
 ## package.json
 
 ```json
+"type": "module",
+"exports": {
+".": {
+    "import": "./dist/index.js",
+    "types": "./dist/index.d.ts"
+}
+},
+"main": "dist/index.js",
+"types": "dist/index.d.ts",
+```
+
+```json
 "scripts": {
     "test": "npm run lint && npm run build && c8 --reporter=text-summary ava --config ./ava-dist.config.cjs",
     "test:inspect": "node --inspect node_modules/ava/profile.js",
