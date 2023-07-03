@@ -16,11 +16,11 @@
   },
   "homepage": "https://github.com/integreat-io/ts-dev-setup#readme",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.59.7",
-    "@typescript-eslint/parser": "^5.59.7",
-    "ava": "^5.2.0",
-    "c8": "^7.13.0",
-    "eslint": "^8.41.0",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "ava": "^5.3.1",
+    "c8": "^8.0.0",
+    "eslint": "^8.44.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-ava": "^14.0.0",
     "eslint-plugin-node": "^11.1.0",
@@ -28,6 +28,6 @@
     "eslint-plugin-security": "^1.7.1",
     "prettier": "^2.8.8",
     "ts-node": "^10.9.1",
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.6"
   }
 }
