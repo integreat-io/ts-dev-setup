@@ -15,6 +15,9 @@
     "url": "https://github.com/integreat-io/ts-dev-setup/issues"
   },
   "homepage": "https://github.com/integreat-io/ts-dev-setup#readme",
+  "engines": {
+    "node": ">= 18"
+  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
