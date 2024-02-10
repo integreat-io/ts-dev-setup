@@ -15,8 +15,8 @@ Then run the following commands in terminal to set up symbolic links to config
 files:
 
 ```
-cp node_modules/@integreat/ts-dev-setup/ava-dist.config.cjs ava-dist.config.cjs
-cp node_modules/@integreat/ts-dev-setup/ava.config.cjs ava.config.cjs
+cp node_modules/@integreat/ts-dev-setup/ava-dist.config.cj ava-dist.config.cj
+cp node_modules/@integreat/ts-dev-setup/ava.config.cj ava.config.cj
 cp node_modules/@integreat/ts-dev-setup/codeclimate.yml .codeclimate.yml
 cp node_modules/@integreat/ts-dev-setup/editorconfig .editorconfig
 cp node_modules/@integreat/ts-dev-setup/eslintrc.json .eslintrc.json
@@ -40,7 +40,7 @@ cp node_modules/@integreat/ts-dev-setup/tsconfig.json tsconfig.json
 
 ```json
 "scripts": {
-    "test": "npm run lint && npm run build && c8 --reporter=text-summary ava --config ./ava-dist.config.cjs",
+    "test": "npm run lint && npm run build && c8 --reporter=text-summary ava --config ./ava-dist.config.js",
     "test:inspect": "node --inspect node_modules/ava/profile.js",
     "test:watch": "npm run dev",
     "dev": "ava --watch",
