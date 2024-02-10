@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/integreat-io/ts-dev-setup#readme",
   "engines": {
-    "node": ">= 18.18"
+    "node": ">= 20"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.21.0",
