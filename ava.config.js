@@ -1,4 +1,7 @@
 export default {
+  environmentVariables: {
+    TSIMP_DIAG: 'ignore',
+  },
   extensions: { js: true, ts: 'module' },
   nodeArguments: ['--import=tsimp'],
   watchMode: {
