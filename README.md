@@ -2,8 +2,12 @@
 
 _Note:_ You are more than welcome to use this setup in your own projects. We
 will however update this repository according to what we need in the
-Integreat codebases, and take no responsibility for how this may affect your
+Integreat codebases and take no responsibility for how this may affect your
 projects. If you want to make changes, we suggest forking.
+
+> [!NOTE]
+> **Breaking chaning in version 7:** We have dropped Ava as a test framework and
+> c8 for coverage, and have started using the built-in node test runner.
 
 ## Install
 
@@ -15,8 +19,6 @@ Then run the following commands in terminal to set up symbolic links to config
 files:
 
 ```
-cp node_modules/@integreat/ts-dev-setup/ava-dist.config.cj ava-dist.config.cj
-cp node_modules/@integreat/ts-dev-setup/ava.config.cj ava.config.cj
 cp node_modules/@integreat/ts-dev-setup/codeclimate.yml .codeclimate.yml
 cp node_modules/@integreat/ts-dev-setup/editorconfig .editorconfig
 cp node_modules/@integreat/ts-dev-setup/eslintrc.json .eslintrc.json
@@ -40,12 +42,11 @@ cp node_modules/@integreat/ts-dev-setup/tsconfig.json tsconfig.json
 
 ```json
 "scripts": {
-    "test": "npm run lint && npm run build && c8 --reporter=text-summary ava --config ./ava-dist.config.js",
+    "test": "node --import tsx --test --enable-source-maps --experimental-test-coverage --test-reporter node-test-reporter 'src/**/*.test.ts'",
     "test:inspect": "node --inspect node_modules/ava/profile.js",
     "test:watch": "npm run dev",
-    "dev": "ava --watch",
+    "dev": "node --import tsx --test --enable-source-maps --test-reporter node-test-reporter --watch 'src/**/*.test.ts' || exit 0",
     "build": "tsc",
-    "coverage": "c8 report",
     "lint": "eslint --ext .ts src"
 }
 ```
