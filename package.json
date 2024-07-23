@@ -20,16 +20,16 @@
     "node": ">= 18.18"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.16.1",
-    "@typescript-eslint/parser": "^7.16.1",
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "@typescript-eslint/parser": "^7.17.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.5.1",
+    "eslint-plugin-promise": "^6.6.0",
     "eslint-plugin-security": "^3.0.1",
-    "node-test-reporter": "^1.0.2",
+    "node-test-reporter": "^1.0.3",
     "prettier": "^3.3.3",
     "tsx": "^4.16.2",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   }
 }
