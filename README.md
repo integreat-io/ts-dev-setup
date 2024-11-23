@@ -1,13 +1,16 @@
 # Shared dev setup for Integreat TypeScript projects
 
-_Note:_ You are more than welcome to use this setup in your own projects. We
-will however update this repository according to what we need in the
-Integreat codebases and take no responsibility for how this may affect your
-projects. If you want to make changes, we suggest forking.
-
 > [!NOTE]
-> **Breaking chaning in version 7:** We have dropped Ava as a test framework and
-> c8 for coverage, and have started using the built-in node test runner.
+> You are more than welcome to use this setup in your own projects. We will
+> however update this repository according to what we need in the Integreat
+> codebases and take no responsibility for how this may affect your projects. If
+> you want to make changes, we suggest forking.
+
+## Breaking changes
+- **Version 8:** We are now using eslint 9, which comes with a brand new config
+  file format.
+- **Version 7:** We have dropped Ava as a test framework and c8 for coverage,
+  and have started using the built-in node test runner.
 
 ## Install
 
@@ -21,7 +24,7 @@ files:
 ```
 cp node_modules/@integreat/ts-dev-setup/codeclimate.yml .codeclimate.yml
 cp node_modules/@integreat/ts-dev-setup/editorconfig .editorconfig
-cp node_modules/@integreat/ts-dev-setup/eslintrc.json .eslintrc.json
+cp node_modules/@integreat/ts-dev-setup/eslint.config.js eslint.config.js
 cp node_modules/@integreat/ts-dev-setup/prettierrc.json .prettierrc.json
 cp node_modules/@integreat/ts-dev-setup/tsconfig.json tsconfig.json
 ```
@@ -43,10 +46,10 @@ cp node_modules/@integreat/ts-dev-setup/tsconfig.json tsconfig.json
 ```json
 "scripts": {
     "test": "node --import tsx --test --enable-source-maps --experimental-test-coverage --test-reporter node-test-reporter 'src/**/*.test.ts'",
-    "test:inspect": "node --inspect node_modules/ava/profile.js",
     "test:watch": "npm run dev",
     "dev": "node --import tsx --test --enable-source-maps --test-reporter node-test-reporter --watch 'src/**/*.test.ts' || exit 0",
     "build": "tsc",
-    "lint": "eslint --ext .ts src"
+    "lint": "eslint src",
+    "verify": "npm run lint && npm test"
 }
 ```
