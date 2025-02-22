@@ -50,6 +50,7 @@ cp node_modules/@integreat/ts-dev-setup/tsconfig.json tsconfig.json
     "dev": "node --import tsx --test --enable-source-maps --test-reporter node-test-reporter --watch 'src/**/*.test.ts' || exit 0",
     "build": "tsc",
     "lint": "eslint src",
+    "format": "prettier src/**/*.ts",
     "typecheck": "tsc --noEmit --strict",
     "verify": "npm run lint && npm run typecheck && npm test",
 }
