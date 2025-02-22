@@ -23,9 +23,9 @@ files:
 
 ```
 cp node_modules/@integreat/ts-dev-setup/codeclimate.yml .codeclimate.yml
-cp node_modules/@integreat/ts-dev-setup/editorconfig .editorconfig
+cp node_modules/@integreat/ts-dev-setup/.editorconfig .editorconfig
 cp node_modules/@integreat/ts-dev-setup/eslint.config.js eslint.config.js
-cp node_modules/@integreat/ts-dev-setup/prettierrc.json .prettierrc.json
+cp node_modules/@integreat/ts-dev-setup/.prettierrc.json .prettierrc.json
 cp node_modules/@integreat/ts-dev-setup/tsconfig.json tsconfig.json
 ```
 
