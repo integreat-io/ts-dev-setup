@@ -7,6 +7,7 @@
 > you want to make changes, we suggest forking.
 
 ## Breaking changes
+
 - **Version 8:** We are now using eslint 9, which comes with a brand new config
   file format.
 - **Version 7:** We have dropped Ava as a test framework and c8 for coverage,
@@ -22,10 +23,10 @@ Then run the following commands in terminal to set up symbolic links to config
 files:
 
 ```
-cp node_modules/@integreat/ts-dev-setup/codeclimate.yml .codeclimate.yml
 cp node_modules/@integreat/ts-dev-setup/.editorconfig .editorconfig
 cp node_modules/@integreat/ts-dev-setup/eslint.config.js eslint.config.js
 cp node_modules/@integreat/ts-dev-setup/.prettierrc.json .prettierrc.json
+cp node_modules/@integreat/ts-dev-setup/quality.toml quality.toml
 cp node_modules/@integreat/ts-dev-setup/tsconfig.json tsconfig.json
 ```
 
@@ -49,8 +50,9 @@ cp node_modules/@integreat/ts-dev-setup/tsconfig.json tsconfig.json
     "test:watch": "npm run dev",
     "dev": "node --import tsx --test --enable-source-maps --test-reporter node-test-reporter --watch 'src/**/*.test.ts' || exit 0",
     "build": "tsc",
+    "prepublishOnly": "npm run build",
     "lint": "eslint src",
-    "format": "prettier src/**/*.ts",
+    "format": "prettier src/**/*.ts *.md -w",
     "typecheck": "tsc --noEmit --strict",
     "verify": "npm run lint && npm run typecheck && npm test",
 }
