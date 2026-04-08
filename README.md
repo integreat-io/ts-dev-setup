@@ -8,6 +8,7 @@
 
 ## Breaking changes
 
+- **Version 9:** Using eslint 10 and dropped eslint-plugin-promise.
 - **Version 8:** We are now using eslint 9, which comes with a brand new config
   file format.
 - **Version 7:** We have dropped Ava as a test framework and c8 for coverage,
