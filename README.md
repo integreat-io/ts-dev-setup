@@ -8,6 +8,10 @@
 
 ## Breaking changes
 
+- **Version 10:** We now require Node 22.13 or later, as eslint 10 no longer
+  runs on Node 18 or 20. The tsconfig has been updated to match, and now targets
+  ES2024 and uses the `node20` module mode. Note that TypeScript is still held
+  at version 6, as typescript-eslint does not yet support TypeScript 7.
 - **Version 9:** Using eslint 10 and dropped eslint-plugin-promise.
 - **Version 8:** We are now using eslint 9, which comes with a brand new config
   file format.
