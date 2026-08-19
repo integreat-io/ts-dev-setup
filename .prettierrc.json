@@ -1,5 +1,11 @@
 {
   "semi": false,
   "singleQuote": true,
-  "jsxSingleQuote": true
+  "jsxSingleQuote": true,
+  "overrides": [
+    {
+      "files": ["tsconfig.json", "tsconfig.*.json", "jsconfig.json"],
+      "options": { "parser": "jsonc" }
+    }
+  ]
 }
